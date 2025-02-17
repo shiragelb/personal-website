@@ -1,0 +1,78 @@
+
+#next-section {
+    height: 100vh; 
+}
+
+#name{
+    color: rgb(122, 37, 37);
+}
+
+#header {
+    position: sticky;
+    top: 0;
+    background-color: white; /* Add a background color to prevent content from showing through */
+    z-index: 100; /* Ensure the header is above other content */
+    font-size: larger;
+    font-weight: 400;
+}
+
+/* makes it interactive */
+.scroll-button{
+    transition: transform 0.2s ease;
+    transform-origin: bottom;
+}
+
+.scroll-button:hover {
+    transform: scale(1.1);
+}
+
+#header .nav-link{
+    color: black
+    
+}
+
+#header .nav-link:hover {
+    color: #930b0b; /* Hover color (slightly darker blue) */
+    /* background-color: #7f7575; Light gray background on hover */
+}
+
+#about-section img {
+    width: 220px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 50%; /* Make the image circular */
+    margin-top: 150px;
+    margin-bottom: 50px;
+}
+
+#projects-section {
+    margin-top: 300px; /* Adjust the value as needed */
+}
+
+#projects-section,
+#about-section, #header  {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+}
+
+#header .container{
+    font-size: larger;
+    font-weight: 400;
+}
+
+#about-title{
+    color: #8e2828;
+}
+
+/* h1.text-body-emphasis {
+    opacity: 0;
+    transform: scale(0.2);
+    transition: opacity 1.4s cubic-bezier(0.21, 1.11, 0.81, 0.99), transform 1.4s cubic-bezier(0.21, 1.11, 0.81, 0.99);
+} */ 
+
+/* h1.text-body-emphasis.show {
+    opacity: 1;
+    transform: scale(1);
+    transform-origin: left
+} */
