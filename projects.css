@@ -31,11 +31,14 @@
     transform-origin: bottom;
     background-color: #ffffff; /* Dark red color */
     color: rgb(3, 3, 3); /* White text */
-    padding: 8px 12px; /* Adjust padding for a better shape */
+    padding: 6px 10px; /* Adjust padding for a better shape */
     /* border: none; Remove default border */
     border-radius: 21px; /* Makes the button rounded
     cursor: pointer; /* Make cursor a pointer on hover */
-    box-shadow: 0 4px 6px rgba(155, 127, 127, 0.2); /* Add a slight shadow */
+    border-color: #8e2828;
+    border-width: 3px;
+    font-weight: 600px;
+    /* box-shadow: 0 4px 6px rgba(155, 127, 127, 0.2); Add a slight shadow */
 }
 
 .scroll-button:hover {
