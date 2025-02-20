@@ -34,6 +34,7 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
+  
     const homeLink = document.getElementById("home-link");
     const introSection = document.getElementById("into-to-website");
 
@@ -43,6 +44,19 @@ document.addEventListener("DOMContentLoaded", function () {
             introSection.scrollIntoView({ behavior: "smooth" });
         });
     }
+
+    const header = document.getElementById("header");
+
+    window.addEventListener("scroll", function () {
+        const introBottom = introSection.getBoundingClientRect().bottom;
+
+        if (introBottom <= 0) {
+            header.classList.add("sticky"); // Make header sticky
+        } else {
+            header.classList.remove("sticky"); // Remove sticky effect
+        }
+    });
+
 
     const aboutLink = document.getElementById("about-link");
     const aboutSection = document.getElementById("about-section");

@@ -8,19 +8,34 @@
 }
 
 #header {
-    position: sticky;
-    top: 0;
-    background-color: white; /* Add a background color to prevent content from showing through */
-    z-index: 100; /* Ensure the header is above other content */
+    position: relative; /* Default: not sticky */
+    width: 100%;
+    transition: all 0.4s ease-in-out; /* Smooth transition */
     font-size: larger;
     font-weight: 400;
+    background-color: white;
 }
 
+#header.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; 
+}
 
-/* makes it interactive */
-.scroll-button{
+/* makes botton interactive and nicer*/
+
+.scroll-button {
     transition: transform 0.2s ease;
     transform-origin: bottom;
+    background-color: #ffffff; /* Dark red color */
+    color: rgb(3, 3, 3); /* White text */
+    padding: 8px 12px; /* Adjust padding for a better shape */
+    /* border: none; Remove default border */
+    border-radius: 21px; /* Makes the button rounded
+    cursor: pointer; /* Make cursor a pointer on hover */
+    box-shadow: 0 4px 6px rgba(155, 127, 127, 0.2); /* Add a slight shadow */
 }
 
 .scroll-button:hover {
@@ -29,7 +44,6 @@
 
 #header .nav-link{
     color: black
-    
 }
 
 #header .nav-link:hover {
@@ -59,9 +73,10 @@
 }
 
 #header .container{
-    font-size: larger;
+    font-size: 1.5rem;
     font-weight: 400;
 }
+
 
 #about-title{
     color: #8e2828;
