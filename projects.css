@@ -35,10 +35,10 @@
     /* border: none; Remove default border */
     border-radius: 21px; /* Makes the button rounded
     cursor: pointer; /* Make cursor a pointer on hover */
-    border-color: #8e2828;
+    border-color:#8e2828;
     border-width: 3px;
     font-weight: 600px;
-    /* box-shadow: 0 4px 6px rgba(155, 127, 127, 0.2); Add a slight shadow */
+    box-shadow: 0 4px 6px rgba(155, 127, 127, 0.2); /*Add a slight shadow */
 }
 
 .scroll-button:hover {
