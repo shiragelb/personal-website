@@ -16,6 +16,7 @@
     font-weight: 400;
 }
 
+
 /* makes it interactive */
 .scroll-button{
     transition: transform 0.2s ease;
@@ -54,6 +55,7 @@
     display: flex;
     flex-direction: column; /* Stack items vertically */
     align-items: center; /* Center items horizontally */
+    margin-left: 100px;
 }
 
 #header .container{
@@ -65,14 +67,73 @@
     color: #8e2828;
 }
 
-/* h1.text-body-emphasis {
+/* makes the effect in the text in the opening screen */
+h1.text-body-emphasis-1 {
+    color: black;
     opacity: 0;
-    transform: scale(0.2);
-    transition: opacity 1.4s cubic-bezier(0.21, 1.11, 0.81, 0.99), transform 1.4s cubic-bezier(0.21, 1.11, 0.81, 0.99);
-} */ 
+    transform: translateX(-0.5rem); /* Slide in from left */
+    transition: transform 2s ease, opacity 2s ease; /* Add transition */
+}
 
-/* h1.text-body-emphasis.show {
+h1.text-body-emphasis-1.show {
     opacity: 1;
-    transform: scale(1);
-    transform-origin: left
+    transform: translateX(0); /* Return to normal position */
+}
+
+body.is-preload h1.text-body-emphasis-1 {
+    opacity: 0;
+    transform: translateX(-0.5rem); /* Initial state for preload */
+}
+
+body.is-preload h1.text-body-emphasis-1.show {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+
+#first-item{
+    background-color:rgb(149, 42, 42);; /* Light background */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+    border-top-color: 1px solid #dee2e6;
+    margin-bottom: 80px;
+    margin-top: 70px;
+    color: aliceblue;
+}
+
+#second-item{
+    background-color: #d2d2d2; /* Light background */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+    border-top-color: 1px solid #dee2e6;
+}
+
+.project-item:hover {
+    transform: translateY(-2px); /* Slightly lift on hover */
+    box-shadow: 0 4px 6px rgba(88, 71, 71, 0.2); /* Enhanced shadow on hover */
+}
+
+#contact-section .contact-icon:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+#contact-section {
+    padding: 80px 0;
+    margin-top: 100px;
+}
+
+.contact-icon {
+    display: inline-block;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+#contact-section .contact-icon img {
+    transition: transform 0.2s ease;
+}
+
+#contact-section .contact-icon:hover img {
+    transform: translateY(-2px);
+}
+
+/* #contact-section .container{
 } */
