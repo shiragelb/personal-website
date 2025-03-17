@@ -22,18 +22,6 @@ document.addEventListener("DOMContentLoaded", function () {
         document.body.classList.remove("is-preload"); //remove is preload class
     });
 
-    //linking all the buttoms to their sections
-    const scrollButton = document.getElementById("scroll-button");
-
-    if (scrollButton) {
-        scrollButton.addEventListener("click", function () {
-            const nextSection = document.getElementById("about-section");
-            if(nextSection){
-                nextSection.scrollIntoView({ behavior: "smooth" });
-            }
-        });
-    }
-
   
     const homeLink = document.getElementById("home-link");
     const introSection = document.getElementById("into-to-website");
@@ -57,17 +45,31 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
-
+    //linking "continue" bottun
+    
     const aboutLink = document.getElementById("about-link");
     const aboutSection = document.getElementById("about-section");
+ 
+    const scrollButton = document.getElementById("scroll-button");
 
+    if (scrollButton&& aboutSection) {
+        scrollButton.addEventListener("click", function (event) {
+                event.preventDefault();
+                aboutSection.scrollIntoView({ behavior: "smooth" , block: "start" });
+        });
+    }
+
+
+
+    //linking all the buttoms to their sections
     if (aboutLink && aboutSection) {
         aboutLink.addEventListener("click", function (event) {
             event.preventDefault();
             aboutSection.scrollIntoView({ behavior: "smooth" });
         });
     }
-
+    
+    
     const projectsLink = document.getElementById("projects-link");
     const projectsSection = document.getElementById("projects-section");
 

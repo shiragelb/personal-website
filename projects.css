@@ -6,22 +6,25 @@
 #name{
     color: rgb(122, 37, 37);
 }
+#into-to-website {
+    height: 100vh; /* Make the section full viewport height */
+    display: flex; /* Use flexbox for centering */
+    flex-direction: column; /* Align items vertically */
+    justify-content: center; /* Center vertically */
+    align-items: center; /* Center horizontally */
+}
 
-#header {
-    position: relative; /* Default: not sticky */
-    width: 100%;
-    transition: all 0.4s ease-in-out; /* Smooth transition */
-    font-size: larger;
-    font-weight: 400;
-    background-color: #ffffff;
+#into-to-website .content { /* Container for the content */
+    text-align: center;
 }
 
 #header.sticky {
     position: fixed;
     top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000; 
+    width: 90%;
+    background-color: #ffffff;
+    outline: none; /* Removes outline for all links */
+    border: none; 
 }
 
 /* makes botton interactive and nicer*/
