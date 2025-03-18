@@ -1,3 +1,7 @@
+* {
+    user-select: none; /* Prevents text selection */
+    caret-color: transparent; /* Hides blinking text cursor */
+}
 
 #next-section {
     height: 100vh; 
@@ -83,15 +87,18 @@
 }
 
 #projects-section,
-#about-section, #header  {
+#about-section, #header ,#skills {
     display: flex;
     flex-direction: column; /* Stack items vertically */
     align-items: center; /* Center items horizontally */
 
 }
 
+#skills{
+    width: 100%;
+}
 #header .container{
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-weight: 400;
 }
 
@@ -144,9 +151,9 @@ body.is-preload h1.text-body-emphasis-1.show {
     box-shadow: 0 4px 6px rgba(88, 71, 71, 0.2); /* Enhanced shadow on hover */
 }
 
-#contact-section .contact-icon:hover {
+/* #contact-section .contact-icon:hover {
     transform: translateY(-5px);
-}
+} */
 
 #contact-section {
     padding: 80px 0;
